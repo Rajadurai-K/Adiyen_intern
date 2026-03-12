@@ -78,7 +78,7 @@ def chunk_book_text(text, chunk_size=2000, chunk_overlap=400):
 structured_chunks = []
 
 for chapter_type, chapter_title, chapter_content in matches:
-    ref = f"{BOOK_NAME} -> {chapter_type.strip()}, {chapter_title.strip()}"
+    ref = f"{BOOK_NAME} -> {chapter_type.strip()} -> {chapter_title.strip()}"
     clean_content = re.sub(r'\s+', ' ', chapter_content).strip()
     
     split_chunks = chunk_book_text(clean_content, CHUNK_SIZE, CHUNK_OVERLAP)
