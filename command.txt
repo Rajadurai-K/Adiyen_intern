@@ -1,0 +1,4 @@
+first line : ^\s+
+
+single line : (\r?\n){3,}
+replace : \n\n
